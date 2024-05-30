@@ -8,6 +8,6 @@
     - name: print hello world
       ansible.builtin.debug:
         msg: "Hello world"
-    - name: print msg with variables
+    - name: print message with variables
       ansible.builtin.debug:
-        msg: "Trainer is {{TRAINER}} and {{COURSE}}" duration is {{DURATION}}"
+        msg: "Trainer is {{TRAINER}} and {{COURSE}} duration is {{DURATION}}"
