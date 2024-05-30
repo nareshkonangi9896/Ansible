@@ -1,0 +1,14 @@
+- name: pinging the server
+  hosts: mongodb
+  tasks:
+    -name: ping the server
+    ansible.builtin.ping:
+
+- name: install the nginx
+  hosts: mongodb
+  tasks:
+  - name:install nginx
+    ansible.builtin.yum: "name=nginx status=installed"
+  - name:install nginx
+    ansible.builtin.service: "name=nginx status=started"
+
