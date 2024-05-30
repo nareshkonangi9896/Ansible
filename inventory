@@ -1,0 +1,5 @@
+[mongodb]
+roboshop-us-dev-db-mongodb-01.nareshdevops.online
+
+[db:children]
+mongodb
