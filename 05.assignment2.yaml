@@ -13,7 +13,7 @@
   tasks:
     - name: register path
       stat:
-        path: /home/centos/N
+        path: /home/centos/hi
       register: register_name
     - name : print register
       debug:
