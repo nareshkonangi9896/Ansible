@@ -14,4 +14,4 @@
       ansible.builtin.user:
         name: roboshop
       when: output.rc != 0
-
+      

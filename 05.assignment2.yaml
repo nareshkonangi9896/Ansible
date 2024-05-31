@@ -1,0 +1,7 @@
+- name: directory creation if not exists
+  hosts: localhost
+  tasks:
+    - name: checking directory
+    ansible.builtin.stat:
+      path: /home/centos/Ansible
+    register: st
