@@ -3,5 +3,5 @@
   tasks:
     - name: checking directory
       stat:
-        path: /home/centos/Naresh
+        path: /naresh/centos/Naresh
       register: st
