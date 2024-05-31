@@ -1,7 +1,5 @@
 - name: variables
   hosts: localhost
-  vars:
-    Name:
   tasks:
     - name: cmd line variables
       ansible.builtin.debug:
