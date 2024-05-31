@@ -5,10 +5,11 @@
       prompt: What is your username?
       private: false
   tasks:
-    - name: user exists check and create user
+    - name: user exists check 
       ansible.builtin.command: id {{user}}
       register: output
       ignore_errors: true
+    - name: create user with input
       ansible.builtin.user:
         name: roboshop
       when: user_cvar.rc != 0
