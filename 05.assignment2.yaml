@@ -13,8 +13,8 @@
   tasks:
     - name: register path
       stat:
-      path: /home/centos/N
-      register: register_name
+        path: /home/centos/N
+        register: register_name
     - name : print register
       debug:
         msg: "folder exits"
