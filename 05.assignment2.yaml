@@ -13,7 +13,7 @@
   tasks:
     - name: register path
       stat:
-      path: [path to the file or directory you want to check]
+      path: /home/centos/N
       register: register_name
     - name : print register
       debug:
