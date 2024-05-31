@@ -18,4 +18,4 @@
     - name : print register
       debug:
         msg: "folder exits"
-      when: register_name.stat.exits
+      when: register_name.stat.islnk is not defined
