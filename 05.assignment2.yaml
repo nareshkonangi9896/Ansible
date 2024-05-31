@@ -5,4 +5,4 @@
       ansible.builtin.file:
         path: /home/centos/Naresh
         state: directory
-        mode: u+rwx,g+rwx,o-rx
+        mode: u+rwx,g+rwx,o+rx
