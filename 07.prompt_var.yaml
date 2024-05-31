@@ -10,4 +10,4 @@
   tasks:
     - name: Print a message
       ansible.builtin.debug:
-        msg: 'Logging in as {{ username }}'
+        msg: "Logging in as {{ username }} with {{ password }}"
