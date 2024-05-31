@@ -2,6 +2,6 @@
   hosts: localhost
   tasks:
     - name: checking directory
-    ansible.builtin.stat:
-      path: /home/centos/Ansible
-    register: st
+      ansible.builtin.stat:
+        path: /home/centos/Ansible
+      register: st
