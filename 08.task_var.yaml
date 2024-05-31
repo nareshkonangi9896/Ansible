@@ -1,7 +1,7 @@
 - name: variables
   hosts: localhost
   vars:
-    course: Devops
+    COURSE: Devops
     TRAINER: Sivakumar
     DURATION: 110
   tasks:
@@ -10,7 +10,7 @@
         msg: "Trainer is {{TRAINER}} and {{COURSE}} duration is {{DURATION}}"
     - name: print task varibales
       vars:
-        course: Testing
+        COURSE: Testing
         TRAINER: Naresh
         DURATION: 10
       ansible.builtin.debug:
