@@ -9,7 +9,7 @@
       ansible.builtin.command: id {{user}}
       register: output
       ignore_errors: true
-      ansible.builtin.user:
-        name: roboshop
-      when: user_cvar.rc != 0
+        ansible.builtin.user:
+          name: roboshop
+        when: user_cvar.rc != 0
 
