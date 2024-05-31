@@ -14,8 +14,8 @@
     - name: register path
       stat:
         path: /home/centos/N
-        register: register_name
-    - name : print register
-      debug:
-        msg: "folder exits"
-      when: register_name.stat.exits
+      register: register_name
+    # - name : print register
+    #   debug:
+    #     msg: "folder exits"
+    #   when: register_name.stat.exits
