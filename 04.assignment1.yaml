@@ -10,6 +10,7 @@
       register: output
       ignore_errors: true
     - name: create user with input
+      become: true
       ansible.builtin.user:
         name: roboshop
       when: output.rc != 0
