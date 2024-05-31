@@ -1,0 +1,15 @@
+- name: create user
+  hosts: localhost
+  vars_prompt:
+    - name: user
+      prompt: What is your username?
+      private: false
+  tasks:
+    - name: user exists check and create user
+      ansible.builtin.command: id {{user}}
+      register: user_cvar
+      ignore_errors: true
+        when: user_cvar.rc != 0
+          ansible.builtin.user:
+          name: roboshop
+
