@@ -1,8 +1,21 @@
-- name: directory creation if not exists
+# - name: directory creation if not exists
+#   hosts: localhost
+#   tasks:
+#     - name: Create a directory if it does not exist
+#       ansible.builtin.file:
+#         path: /home/centos/Naresh
+#         state: directory
+#         mode: u+rwx,g+rwx,o+rx
+
+
+- name: check folder
   hosts: localhost
   tasks:
-    - name: Create a directory if it does not exist
-      ansible.builtin.file:
-        path: /home/centos/Naresh
-        state: directory
-        mode: u+rwx,g+rwx,o+rx
+    - name: register path
+      stat:
+      path: [path to the file or directory you want to check]
+      register: register_name
+    - name : print register
+      debug:
+        msg: "folder exits"
+      when: register_name.stat.exits
