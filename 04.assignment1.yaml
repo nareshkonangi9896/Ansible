@@ -7,9 +7,9 @@
   tasks:
     - name: user exists check and create user
       ansible.builtin.command: id {{user}}
-      register: user_cvar
+      register: output
       ignore_errors: true
-        when: user_cvar.rc != 0
-          ansible.builtin.user:
-          name: roboshop
+      ansible.builtin.user:
+        name: roboshop
+      when: user_cvar.rc != 0
 
