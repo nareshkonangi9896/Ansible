@@ -3,5 +3,5 @@
   tasks:
     - name: checking directory
       ansible.builtin.stat:
-        path: /home/centos/Ansible
+        path: /home/centos/Naresh
       register: st
