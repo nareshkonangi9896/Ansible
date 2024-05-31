@@ -12,10 +12,12 @@
   hosts: localhost
   tasks:
     - name: register path
-      stat:
+      ansible.builtin.stat:
         path: /home/centos/hi
       register: register_name
     - name : print register
-      debug:
+      ansible.builtin.debug:
         msg: "folder exits"
       when: register_name.stat.islnk is defined
+    - name: create directory
+      
