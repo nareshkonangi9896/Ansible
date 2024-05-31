@@ -9,9 +9,9 @@
       ansible.builtin.debug:
         msg: "Trainer is {{TRAINER}} and {{COURSE}} duration is {{DURATION}}"
     - name: print task varibales
-        course: Testing
-        TRAINER: Naresh
-        DURATION: 10
+      course: Testing
+      TRAINER: Naresh
+      DURATION: 10
       ansible.builtin.debug:
         msg: "Trainer is {{TRAINER}} and {{COURSE}} duration is {{DURATION}}"
     
